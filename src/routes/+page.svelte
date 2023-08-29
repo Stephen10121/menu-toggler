@@ -8,7 +8,7 @@
     <MenuToggle />
 </header>
 <div class="menu-parent">
-    <Menu>
+    <Menu animationStyle="slide-top" animationSpeed={1}>
         <ul>
             <li>Hello</li>
             <li>There</li>
@@ -28,5 +28,10 @@
     }
     .menu-parent {
         position: relative;
+        width: 400px;
+        height: calc(100vh - 70px);
+        /* background-color: red; */
+        /* float: right; */
+        overflow: hidden;
     }
 </style>
