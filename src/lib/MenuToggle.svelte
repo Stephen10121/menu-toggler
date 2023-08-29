@@ -1,0 +1,74 @@
+<script lang="ts">
+    export let color = "#000000";
+</script>
+
+<input type="checkbox" id="menu" class="sr-only" />
+<label for="menu" title="Menu" style="--color: {color};">
+    <span class="line" />
+    <span class="line" />
+    <span class="line" />
+</label>
+
+<style>
+    .sr-only {
+        border: 0 !important;
+        clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+        -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;  /* 2 */
+        height: 1px !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+        position: absolute !important;
+        width: 1px !important;
+        white-space: nowrap !important;            /* 3 */
+    }
+
+    label {
+        display: block;
+        overflow: hidden;
+        border: none;
+        background: none;
+    }
+
+    span {
+        --animation-speed: 0.3s;
+        width: 30px;
+        height: 3px;
+        display: block;
+        background-color: var(--color);
+        margin: 7px auto;
+        border-radius: 2px;
+        -webkit-transition: all var(--animation-speed) ease-in-out;
+        -o-transition: all var(--animation-speed) ease-in-out;
+        transition: all var(--animation-speed) ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        span {
+            --animation-speed: 0s;
+        }
+    }
+
+    label:hover {
+        cursor: pointer;
+    }
+
+    #menu:checked + label .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu:checked + label .line:nth-child(1) {
+        -webkit-transform: translateY(9px) rotate(45deg);
+        -ms-transform: translateY(9px) rotate(45deg);
+        -o-transform: translateY(9px) rotate(45deg);
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #menu:checked + label .line:nth-child(3) {
+        -webkit-transform: translateY(-11px) rotate(-45deg);
+        -ms-transform: translateY(-11px) rotate(-45deg);
+        -o-transform: translateY(-11px) rotate(-45deg);
+        transform: translateY(-11px) rotate(-45deg);
+    }
+</style>
