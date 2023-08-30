@@ -54,18 +54,18 @@
         cursor: pointer;
     }
 
-    #menu:checked + label .line:nth-child(2) {
+    input:checked + label .line:nth-child(2) {
         opacity: 0;
     }
 
-    #menu:checked + label .line:nth-child(1) {
+    input:checked + label .line:nth-child(1) {
         -webkit-transform: translateY(9px) rotate(45deg);
         -ms-transform: translateY(9px) rotate(45deg);
         -o-transform: translateY(9px) rotate(45deg);
         transform: translateY(9px) rotate(45deg);
     }
 
-    #menu:checked + label .line:nth-child(3) {
+    input:checked + label .line:nth-child(3) {
         -webkit-transform: translateY(-11px) rotate(-45deg);
         -ms-transform: translateY(-11px) rotate(-45deg);
         -o-transform: translateY(-11px) rotate(-45deg);

@@ -1,5 +1,5 @@
 <script lang="ts">
-    type AnimationOptions = "slide-right" | "slide-left" | "slide-bottom" | "slide-top" | "opacity-change" | "none";
+    type AnimationOptions = "from-right" | "from-left" | "from-bottom" | "from-top" | "opacity-change" | "none";
     export let animationStyle: AnimationOptions = "none";
     export let animationSpeed = 0.15;
 </script>
@@ -21,22 +21,22 @@
 
     #options.none,
     #options.opacity-change {opacity: 0}
-    #options.slide-right,
-    #options.slide-bottom,
-    #options.slide-top,
-    #options.slide-left {transition: transform var(--transition-speed) linear}
-    #options.slide-right {transform: translateX(-100%)}
-    #options.slide-left {transform: translateX(100%)}
-    #options.slide-bottom {transform: translateY(100%)}
-    #options.slide-top {transform: translateY(-100%)}
+    #options.from-right,
+    #options.from-bottom,
+    #options.from-top,
+    #options.from-left {transition: transform var(--transition-speed) linear}
+    #options.from-right {transform: translateX(-100%)}
+    #options.from-left {transform: translateX(100%)}
+    #options.from-bottom {transform: translateY(100%)}
+    #options.from-top {transform: translateY(-100%)}
     #options.opacity-change {transition: opacity var(--transition-speed) linear}
 
-    :global(body:has(#menu:checked) #options.slide-bottom),
-    :global(body:has(#menu:checked) #options.slide-top) {
+    :global(body:has(#menu:checked) #options.from-bottom),
+    :global(body:has(#menu:checked) #options.from-top) {
         transform: translateY(0);
     }
-    :global(body:has(#menu:checked) #options.slide-left),
-    :global(body:has(#menu:checked) #options.slide-right) {
+    :global(body:has(#menu:checked) #options.from-left),
+    :global(body:has(#menu:checked) #options.from-right) {
         transform: translateX(0);
     }
     
