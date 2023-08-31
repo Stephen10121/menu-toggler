@@ -11,7 +11,7 @@
     let showBackground = false;
     let animationSpeed = "0.15";
 
-    $: previewCode = `\n<div class="menu-parent" style="\n    width: ${width};\n    height: ${height};\n    top: ${top};\n    left: ${left};\n    background: ${showBackground ? "hsl(259, 100%, 65%)" : "none"};\n">\n    <Menu\n        animationStyle="${animationOptions}"\n        animationSpeed={${animationSpeed}}\n    >\n        <p>Awesome Menu</p>\n    </Menu>\n</div>`;
+    $: previewCode = `\n<div class="menu-parent" style="\n    width: ${width};\n    height: ${height};\n    top: ${top};\n    left: ${left};\n    background: ${showBackground ? "hsl(259, 100%, 65%)" : "none"};\n">\n    <Menu\n        animationStyle="${animationOptions}"\n        animationSpeed="${animationSpeed}"\n    >\n        <p>Awesome Menu</p>\n    </Menu>\n</div>`;
 </script>
 
 <header>

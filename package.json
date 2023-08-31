@@ -1,6 +1,6 @@
 {
 	"name": "menu-toggler",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev --host",
@@ -12,14 +12,6 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"exports": {
-		"./Menu.svelte": {
-			"types": "./dist/MenuToggle.svelte.d.ts",
-			"svelte": "./dist/MenuToggle.svelte"
-		},
-		"./MenuToggle.svelte": {
-			"types": "./dist/MenuToggle.svelte.d.ts",
-			"svelte": "./dist/MenuToggle.svelte"
-		},
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
