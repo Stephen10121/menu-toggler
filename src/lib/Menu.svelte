@@ -1,7 +1,7 @@
 <script lang="ts">
     type AnimationOptions = "from-right" | "from-left" | "from-bottom" | "from-top" | "opacity-change" | "none";
     export let animationStyle: AnimationOptions = "none";
-    export let animationSpeed = 0.15;
+    export let animationSpeed = "0.15";
 </script>
 
 <div id="options" class="{animationStyle}" style="--transition-speed: {animationSpeed}s;">
@@ -16,11 +16,12 @@
         background-color: #dfdfdf;
         top: 0;
         left: 0;
+        pointer-events: all;
         --transition-speed: 0.15s;
     }
 
     #options.none,
-    #options.opacity-change {opacity: 0}
+    #options.opacity-change {opacity: 0;pointer-events: none;}
     #options.from-right,
     #options.from-bottom,
     #options.from-top,
@@ -43,5 +44,6 @@
     :global(body:has(#menu:checked) #options.opacity-change),
     :global(body:has(#menu:checked) #options.none) {
         opacity: 1;
+        pointer-events: all;
     }
 </style>

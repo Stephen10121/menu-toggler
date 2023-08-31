@@ -2,8 +2,8 @@
     export let color = "#000000";
 </script>
 
-<input type="checkbox" id="menu" class="sr-only" />
-<label for="menu" title="Menu" style="--color: {color};">
+<input type="checkbox" id="menu" class="sr-only noSelect" />
+<label class="noSelect" for="menu" title="Menu" style="--color: {color};">
     <span class="line" />
     <span class="line" />
     <span class="line" />
@@ -71,4 +71,15 @@
         -o-transform: translateY(-11px) rotate(-45deg);
         transform: translateY(-11px) rotate(-45deg);
     }
+    
+    .noSelect {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .noSelect:focus {outline: none !important}
 </style>
