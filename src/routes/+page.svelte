@@ -2,6 +2,7 @@
     import Menu from "$lib/Menu.svelte";
     import MenuToggle from "$lib/MenuToggle.svelte";
     import Tuner from "$lib/Tuner.svelte";
+    import githubIcon from "../assets/github.svg";
 
     let width = "400px";
     let height = "calc(100% - 70px)";
@@ -16,7 +17,12 @@
 
 <header>
     <h1>Menu Toggler</h1>
-    <MenuToggle />
+    <div class="right">
+        <a href="https://github.com/Stephen10121" target="_blank" title="My Github">
+            <img src={githubIcon} alt="My Github">
+        </a>
+        <MenuToggle />
+    </div>
 </header>
 <div class="menu-parent" style="
     width: {width};
@@ -54,6 +60,21 @@
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: bold;
         font-size: 2rem;
+    }
+
+    header .right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    a {
+        height: 30px;
+    }
+
+    a img {
+        height: 100%;
+        width: 100%;
     }
 
     main {
