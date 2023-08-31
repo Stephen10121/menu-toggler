@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "Menu Toggler",
+            "script": "npm",
+            "args" : "start"
+        }
+    ]
+}
